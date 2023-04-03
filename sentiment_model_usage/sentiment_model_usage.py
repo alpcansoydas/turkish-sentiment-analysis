@@ -3,6 +3,8 @@ import torch.nn as nn
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoModel
 import numpy as np
 import warnings
+from transformers import logging
+logging.set_verbosity_error()
 
 # Ignore warnings
 warnings.filterwarnings("ignore")
@@ -97,5 +99,6 @@ def predict_sentiment(text):
   else:
     return {'Label':'NEUTRAL', 'Ratio':float(probabilities[0][0])}
   
-# Predict the sentiment score of given text    
-predict_sentiment('Dışarı çıkmak için harika bir hava var.')
+# Predict the sentiment score of given text
+text = input('Sentiment analizi için metin giriniz:')
+print(predict_sentiment(text))
