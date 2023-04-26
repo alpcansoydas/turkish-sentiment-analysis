@@ -1,4 +1,4 @@
-# turkish-sentiment-analysis-fine-tuned
+# BERT Base Turkish Sentiment Analysis
 
 This model is a fine-tuned version of dbmdz/bert-base-turkish-cased.
 
